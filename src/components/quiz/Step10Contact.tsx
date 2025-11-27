@@ -182,7 +182,7 @@ export default function Step10Contact() {
              <input 
                type="text" 
                required
-               className="w-full p-3 border border-ui rounded-xl outline-none focus:border-primary transition-colors"
+               className="w-full p-3 border border-ui rounded-xl outline-none focus:border-button-outline transition-colors"
                value={answers.contact.firstName}
                onChange={(e) => updateNestedAnswer('contact', 'firstName', e.target.value)}
              />
@@ -192,7 +192,7 @@ export default function Step10Contact() {
              <input 
                type="text" 
                required
-               className="w-full p-3 border border-ui rounded-xl outline-none focus:border-primary transition-colors"
+               className="w-full p-3 border border-ui rounded-xl outline-none focus:border-button-outline transition-colors"
                value={answers.contact.lastName}
                onChange={(e) => updateNestedAnswer('contact', 'lastName', e.target.value)}
              />
@@ -204,7 +204,7 @@ export default function Step10Contact() {
              <input 
                type="email" 
                required
-               className="w-full p-3 border border-ui rounded-xl outline-none focus:border-primary transition-colors"
+               className="w-full p-3 border border-ui rounded-xl outline-none focus:border-button-outline transition-colors"
                value={answers.contact.email}
                onChange={(e) => updateNestedAnswer('contact', 'email', e.target.value)}
              />
@@ -217,7 +217,7 @@ export default function Step10Contact() {
                required
                placeholder="(555) 555-5555"
                maxLength={14}
-               className="w-full p-3 border border-ui rounded-xl outline-none focus:border-primary transition-colors"
+               className="w-full p-3 border border-ui rounded-xl outline-none focus:border-button-outline transition-colors"
                value={answers.contact.phone}
                onChange={handlePhoneChange}
              />
@@ -228,7 +228,7 @@ export default function Step10Contact() {
         disabled={!isValid || isSubmitting}
         className={`w-full font-bold py-4 rounded-full shadow-lg transition-all mt-4 ${
           isValid && !isSubmitting
-            ? 'bg-primary text-white hover:bg-primary-dark'
+            ? 'bg-next-button text-white hover:opacity-90'
             : 'bg-gray-200 text-gray-400 cursor-not-allowed'
         }`}
       >

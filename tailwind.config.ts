@@ -12,7 +12,9 @@ const config: Config = {
         primary: "#1e3a8a", // Royal Navy Blue
         "primary-dark": "#0f172a", // Dark Navy/Black
         success: "#22c55e", // Success Green
-        banner: "#f97316", // Banner Orange
+        banner: "#A8DADC", // Banner Teal
+        "button-outline": "#A8DADC", // Button outline color
+        "next-button": "#366081", // Next button color
         ui: "#f3f4f6", // UI Gray
         background: "#FFFFFF",
       },

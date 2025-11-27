@@ -30,7 +30,7 @@ export default function Step5Demographics() {
                 onClick={() => updateAnswer('gender', g)}
                 className={cn(
                   "border-2 rounded-xl p-4 cursor-pointer transition-all duration-200 text-center font-semibold",
-                  answers.gender === g ? "border-primary bg-blue-50 text-primary" : "border-ui hover:border-blue-200 bg-white text-gray-600"
+                  answers.gender === g ? "border-button-outline bg-blue-50 text-primary" : "border-ui hover:border-blue-200 bg-white text-gray-600"
                 )}
               >
                 {g}
@@ -43,7 +43,7 @@ export default function Step5Demographics() {
            <label className="block text-sm font-medium mb-2 text-gray-700">Date of Birth</label>
            <input 
               type="date" 
-              className="w-full p-3 border border-ui rounded-xl bg-white outline-none focus:border-primary transition-colors"
+              className="w-full p-3 border border-ui rounded-xl bg-white outline-none focus:border-button-outline transition-colors"
               value={answers.dob} 
               onChange={(e) => updateAnswer('dob', e.target.value)}
            />
@@ -65,7 +65,7 @@ export default function Step5Demographics() {
       <button 
         onClick={nextStep} 
         disabled={!isValid} 
-        className={`w-full font-bold py-4 rounded-full shadow-lg transition-all ${isValid ? 'bg-primary text-white hover:bg-primary-dark' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
+         className={`w-full font-bold py-4 rounded-full shadow-lg transition-all ${isValid ? 'bg-next-button text-white hover:opacity-90' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
       >
         Continue
       </button>

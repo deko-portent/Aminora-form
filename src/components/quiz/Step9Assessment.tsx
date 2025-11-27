@@ -84,9 +84,9 @@ export default function Step9Assessment() {
           <div 
             key={c} 
             onClick={() => toggleComorbidity(c)} 
-            className={`border-2 rounded-xl p-4 cursor-pointer transition-all flex items-center gap-3 ${selectedComorbidities.includes(c) ? 'border-primary bg-blue-50' : 'border-ui bg-white'}`}
+            className={`border-2 rounded-xl p-4 cursor-pointer transition-all flex items-center gap-3 ${selectedComorbidities.includes(c) ? 'border-button-outline bg-blue-50' : 'border-ui bg-white'}`}
           >
-            <div className={`w-5 h-5 rounded border flex items-center justify-center ${selectedComorbidities.includes(c) ? 'bg-primary border-primary text-white' : 'border-gray-300'}`}>
+            <div className={`w-5 h-5 rounded border flex items-center justify-center ${selectedComorbidities.includes(c) ? 'bg-button-outline border-button-outline text-white' : 'border-gray-300'}`}>
               {selectedComorbidities.includes(c) && "✓"}
             </div>
             <span className="font-medium text-primary-dark">{c}</span>
@@ -96,7 +96,7 @@ export default function Step9Assessment() {
       <button 
         disabled={selectedComorbidities.length === 0}
         onClick={handleComorbiditiesSubmit}
-        className={`w-full font-bold py-4 rounded-full shadow-lg transition-all ${selectedComorbidities.length > 0 ? 'bg-primary text-white' : 'bg-gray-200 text-gray-400'}`}
+        className={`w-full font-bold py-4 rounded-full shadow-lg transition-all ${selectedComorbidities.length > 0 ? 'bg-next-button text-white' : 'bg-gray-200 text-gray-400'}`}
       >
         Continue
       </button>

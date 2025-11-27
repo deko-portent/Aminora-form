@@ -43,7 +43,7 @@ export default function Step2SocialProof() {
 
       <button 
         onClick={nextStep}
-        className="w-full bg-primary text-white font-bold py-4 rounded-full shadow-lg hover:bg-primary-dark transition-all"
+        className="w-full bg-next-button text-white font-bold py-4 rounded-full shadow-lg hover:opacity-90 transition-all"
       >
         Continue
       </button>

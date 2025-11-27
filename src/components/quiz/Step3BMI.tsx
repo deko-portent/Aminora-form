@@ -41,7 +41,7 @@ export default function Step3BMI() {
           <div>
             <label className="block text-sm font-medium mb-2 text-gray-700">Feet</label>
             <select 
-              className="w-full p-3 border border-ui rounded-xl bg-white text-lg font-semibold outline-none focus:border-primary transition-colors"
+              className="w-full p-3 border border-ui rounded-xl bg-white text-lg font-semibold outline-none focus:border-button-outline transition-colors"
               value={answers.height.feet}
               onChange={(e) => updateNestedAnswer("height", "feet", e.target.value)}
             >
@@ -52,7 +52,7 @@ export default function Step3BMI() {
           <div>
             <label className="block text-sm font-medium mb-2 text-gray-700">Inches</label>
             <select 
-              className="w-full p-3 border border-ui rounded-xl bg-white text-lg font-semibold outline-none focus:border-primary transition-colors"
+              className="w-full p-3 border border-ui rounded-xl bg-white text-lg font-semibold outline-none focus:border-button-outline transition-colors"
               value={answers.height.inches}
               onChange={(e) => updateNestedAnswer("height", "inches", e.target.value)}
             >
@@ -82,7 +82,7 @@ export default function Step3BMI() {
           <div className="relative h-3 rounded-full w-full bg-gradient-to-r from-blue-300 via-green-400 via-yellow-400 to-red-500">
              {computed.bmi > 0 && (
                <div 
-                 className="absolute top-[-5px] w-5 h-5 bg-white border-4 border-primary rounded-full shadow-md transition-all duration-500 ease-out"
+                 className="absolute top-[-5px] w-5 h-5 bg-white border-4 border-button-outline rounded-full shadow-md transition-all duration-500 ease-out"
                  style={{ left: `calc(${bmiPos}% - 10px)` }}
                />
              )}
@@ -97,7 +97,7 @@ export default function Step3BMI() {
        <button 
          disabled={!isValid}
          onClick={nextStep}
-         className={`w-full font-bold py-4 rounded-full shadow-lg transition-all ${isValid ? 'bg-primary text-white hover:bg-primary-dark' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
+         className={`w-full font-bold py-4 rounded-full shadow-lg transition-all ${isValid ? 'bg-next-button text-white hover:opacity-90' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
        >
          Continue
        </button>

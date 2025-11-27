@@ -14,7 +14,7 @@ const TestimonialCard = ({ t }: { t: any }) => (
     <div className="grid grid-cols-2 gap-0.5 h-40 bg-gray-100">
       <div className="relative h-full overflow-hidden">
         <img src={t.before} alt="Before" className="w-full h-full object-cover transition-transform hover:scale-105 duration-500" />
-        <span className="absolute bottom-2 left-2 bg-[#fbbf24] text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">Before</span>
+        <span className="absolute bottom-2 left-2 bg-button-outline text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">Before</span>
       </div>
       <div className="relative h-full overflow-hidden">
         <img src={t.after} alt="After" className="w-full h-full object-cover transition-transform hover:scale-105 duration-500" />
@@ -205,7 +205,7 @@ export default function ApprovedPage() {
     return (
       <div className="flex flex-col items-end leading-none">
         <div className="flex flex-wrap justify-end items-center gap-x-1.5 gap-y-1 mb-1 max-w-[140px] sm:max-w-none">
-           <span className="text-sm text-gray-400 line-through font-medium decoration-red-400 decoration-[1.5px]">${priceVal}</span>
+           <span className="text-sm text-gray-400 line-through font-medium decoration-gray-300 decoration-[1.5px]">${priceVal}</span>
            <span className="text-[9px] sm:text-[10px] font-bold text-green-600 bg-green-50 px-1.5 py-0.5 rounded-full border border-green-100 tracking-tight whitespace-nowrap">FIRST MONTH OFFER</span>
         </div>
         <div className="text-2xl sm:text-3xl font-bold text-primary flex items-baseline">
@@ -250,7 +250,7 @@ export default function ApprovedPage() {
                 </div>
 
                 {/* Start Weight Label */}
-                <div className="absolute left-0 top-2 text-[#ef4444] font-bold text-lg z-10 bg-white px-1">
+                <div className="absolute left-0 top-2 text-primary font-bold text-lg z-10 bg-white px-1">
                 {startWeight}
                 </div>
 
@@ -258,8 +258,8 @@ export default function ApprovedPage() {
                 <LineChart data={data} margin={{ top: 20, right: 30, left: 10, bottom: 20 }}>
                     <defs>
                     <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
-                        <stop offset="0%" stopColor="#ef4444" />
-                        <stop offset="50%" stopColor="#fbbf24" />
+                        <stop offset="0%" stopColor="#1e3a8a" />
+                        <stop offset="50%" stopColor="#366081" />
                         <stop offset="100%" stopColor="#22c55e" />
                     </linearGradient>
                     </defs>
@@ -277,7 +277,7 @@ export default function ApprovedPage() {
                     dataKey="weight" 
                     stroke="url(#lineGradient)" 
                     strokeWidth={5} 
-                    dot={{r: 6, fill: '#fff', stroke: '#fbbf24', strokeWidth: 3}}
+                    dot={{r: 6, fill: '#fff', stroke: '#A8DADC', strokeWidth: 3}}
                     activeDot={{r: 8}}
                     />
                 </LineChart>
@@ -286,7 +286,7 @@ export default function ApprovedPage() {
 
             {/* Legend */}
             <div className="flex items-center justify-center gap-3 mt-4">
-                <div className="h-2 w-12 rounded-full bg-gradient-to-r from-red-400 via-yellow-400 to-green-400"></div>
+                <div className="h-2 w-12 rounded-full bg-gradient-to-r from-primary via-next-button to-success"></div>
                 <span className="text-xs text-primary font-medium">Aminora 90th Percentile Member Journey</span>
             </div>
             </div>
@@ -294,7 +294,7 @@ export default function ApprovedPage() {
             {/* CTA Button 1 */}
             <button 
             onClick={scrollToPlans}
-            className="w-full bg-gradient-to-r from-primary to-blue-900 text-white font-bold text-lg py-5 rounded-xl shadow-xl hover:shadow-2xl transition-all transform active:scale-95 flex items-center justify-center gap-2"
+            className="w-full bg-next-button text-white font-bold text-lg py-5 rounded-xl shadow-xl hover:opacity-90 transition-all transform active:scale-95 flex items-center justify-center gap-2"
             >
             WOOHOO! CHOOSE MY MEDICATION <span className="text-xl">→</span>
             </button>
@@ -302,34 +302,34 @@ export default function ApprovedPage() {
             {/* Trust Badges Grid */}
             <div className="grid grid-cols-1 gap-4">
             <div className="bg-white p-4 rounded-xl shadow-sm flex items-center gap-4 border border-ui">
-                <div className="w-10 h-10 rounded-full border-2 border-orange-200 flex items-center justify-center text-orange-400">
+                <div className="w-10 h-10 rounded-full border-2 border-button-outline flex items-center justify-center text-button-outline">
                 <MapPin size={20} />
                 </div>
-                <span className="font-bold text-primary text-lg">Licensed clinicians in <span className="text-orange-400">{userState}</span></span>
+                <span className="font-bold text-primary text-lg">Licensed clinicians in <span className="text-button-outline">{userState}</span></span>
             </div>
             
             <div className="bg-white p-4 rounded-xl shadow-sm flex items-center gap-4 border border-ui">
-                <div className="w-10 h-10 rounded-full border-2 border-orange-200 flex items-center justify-center text-orange-400">
+                <div className="w-10 h-10 rounded-full border-2 border-button-outline flex items-center justify-center text-button-outline">
                 <FileText size={20} />
                 </div>
-                <span className="font-bold text-primary text-lg"><span className="text-orange-400">100,000+</span> prescriptions written</span>
+                <span className="font-bold text-primary text-lg"><span className="text-button-outline">100,000+</span> prescriptions written</span>
             </div>
 
             <div className="bg-white p-4 rounded-xl shadow-sm flex items-center gap-4 border border-ui">
-                <div className="w-10 h-10 rounded-full border-2 border-orange-200 flex items-center justify-center text-orange-400">
+                <div className="w-10 h-10 rounded-full border-2 border-button-outline flex items-center justify-center text-button-outline">
                 <Star size={20} />
                 </div>
                 <div className="flex flex-col">
-                <span className="font-bold text-primary text-lg"><span className="text-orange-400">96.4%</span> success rate from the Aminora</span>
+                <span className="font-bold text-primary text-lg"><span className="text-button-outline">96.4%</span> success rate from the Aminora</span>
                 <span className="font-bold text-primary text-lg">program</span>
                 </div>
             </div>
 
             <div className="bg-white p-4 rounded-xl shadow-sm flex items-center gap-4 border border-ui">
-                <div className="w-10 h-10 rounded-full border-2 border-orange-200 flex items-center justify-center text-orange-400">
+                <div className="w-10 h-10 rounded-full border-2 border-button-outline flex items-center justify-center text-button-outline">
                 <Award size={20} />
                 </div>
-                <span className="font-bold text-primary text-lg">Ranked <span className="text-orange-400">#1 Weight Loss</span> provided by Forbes</span>
+                <span className="font-bold text-primary text-lg">Ranked <span className="text-button-outline">#1 Weight Loss</span> provided by Forbes</span>
             </div>
             </div>
         </div>
@@ -373,9 +373,9 @@ export default function ApprovedPage() {
         </div>
 
         {/* Plan Selection Section */}
-        <div id="plan-selection" className="bg-blue-50/50 px-4 py-10 md:rounded-3xl max-w-3xl mx-auto">
+        <div id="plan-selection" className="bg-button-outline/10 px-4 py-10 md:rounded-3xl max-w-3xl mx-auto">
            <h2 className="text-3xl font-bold text-center text-primary mb-2">Choose your medication</h2>
-           <h2 className="text-3xl font-bold text-center text-primary mb-8">to get started <span className="text-orange-400">TODAY</span></h2>
+           <h2 className="text-3xl font-bold text-center text-primary mb-8">to get started <span className="text-button-outline">TODAY</span></h2>
 
            <div className="max-w-md mx-auto space-y-3 mb-8">
              {benefits.map((b, i) => (
@@ -400,20 +400,20 @@ export default function ApprovedPage() {
              <div 
                className={cn(
                  "bg-white rounded-2xl border-2 transition-all duration-200 cursor-pointer overflow-hidden relative shadow-sm hover:shadow-md",
-                 selectedPlan === 'semaglutide' ? "border-primary ring-1 ring-primary" : "border-white hover:border-blue-100"
+                 selectedPlan === 'semaglutide' ? "border-button-outline ring-1 ring-button-outline bg-button-outline/5" : "border-white hover:border-button-outline/30"
                )}
                onClick={() => setSelectedPlan('semaglutide')}
              >
-                <div className="absolute left-0 top-0 bottom-0 w-2 bg-primary"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-2 bg-button-outline"></div>
                 <div className="p-6 pl-8 flex justify-between items-center">
                   <div>
-                    <div className="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded inline-block mb-2">MOST AFFORDABLE</div>
+                    <div className="bg-next-button text-white text-[10px] font-bold px-2 py-1 rounded inline-block mb-2">MOST AFFORDABLE</div>
                     <div className="flex items-center gap-3 mb-1">
                        <div className={cn(
                          "w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors",
-                         selectedPlan === 'semaglutide' ? "border-primary" : "border-gray-300"
+                         selectedPlan === 'semaglutide' ? "border-button-outline" : "border-gray-300"
                        )}>
-                          {selectedPlan === 'semaglutide' && <div className="w-2.5 h-2.5 bg-[#facc15] rounded-full"></div>}
+                          {selectedPlan === 'semaglutide' && <div className="w-2.5 h-2.5 bg-button-outline rounded-full"></div>}
                        </div>
                        <h3 className="text-xl font-bold text-primary">Compounded</h3>
                     </div>
@@ -432,20 +432,20 @@ export default function ApprovedPage() {
              <div 
                className={cn(
                  "bg-white rounded-2xl border-2 transition-all duration-200 cursor-pointer overflow-hidden relative shadow-sm hover:shadow-md",
-                 selectedPlan === 'tirzepatide' ? "border-primary ring-1 ring-primary" : "border-white hover:border-blue-100"
+                 selectedPlan === 'tirzepatide' ? "border-button-outline ring-1 ring-button-outline bg-button-outline/5" : "border-white hover:border-button-outline/30"
                )}
                onClick={() => setSelectedPlan('tirzepatide')}
              >
                 {/* <div className="absolute left-0 top-0 bottom-0 w-2 bg-primary"></div> */}
                 <div className="p-6 pl-8 flex justify-between items-center">
                   <div>
-                    <div className="bg-[#facc15] text-white text-[10px] font-bold px-2 py-1 rounded inline-block mb-2">MOST POPULAR</div>
+                    <div className="bg-button-outline text-white text-[10px] font-bold px-2 py-1 rounded inline-block mb-2">MOST POPULAR</div>
                     <div className="flex items-center gap-3 mb-1">
                        <div className={cn(
                          "w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors",
-                         selectedPlan === 'tirzepatide' ? "border-primary" : "border-gray-300"
+                         selectedPlan === 'tirzepatide' ? "border-button-outline" : "border-gray-300"
                        )}>
-                          {selectedPlan === 'tirzepatide' && <div className="w-2.5 h-2.5 bg-[#facc15] rounded-full"></div>}
+                          {selectedPlan === 'tirzepatide' && <div className="w-2.5 h-2.5 bg-button-outline rounded-full"></div>}
                        </div>
                        <h3 className="text-xl font-bold text-primary">Compounded</h3>
                     </div>
@@ -465,10 +465,10 @@ export default function ApprovedPage() {
           <div className="mt-8 max-w-xl mx-auto space-y-3">
             <button
               onClick={handleCheckout}
-              className="w-full bg-gradient-to-r from-primary to-blue-900 text-white font-bold text-lg py-5 rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 hover:shadow-2xl active:scale-95"
+              className="w-full bg-next-button text-white font-bold text-lg py-5 rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 hover:opacity-90 active:scale-95"
             >
               PROCEED TO CHECKOUT
-              <span className="text-xl text-orange-400">→</span>
+              <span className="text-xl text-button-outline">→</span>
             </button>
           </div>
 

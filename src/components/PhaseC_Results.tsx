@@ -91,13 +91,13 @@ export default function PhaseC_Results() {
              <span className="text-3xl font-bold">$224</span>
              <span className="text-gray-500">/mo</span>
            </div>
-           <button onClick={handleSelectPlan} className="w-full py-3 rounded-xl border-2 border-primary text-primary font-bold hover:bg-blue-50 transition-colors">
+           <button onClick={handleSelectPlan} className="w-full py-3 rounded-xl border-2 border-button-outline text-primary font-bold hover:bg-blue-50 transition-colors">
              Select Plan
            </button>
         </div>
 
         {/* Tirzepatide */}
-        <div className="border-2 border-primary rounded-2xl p-6 relative overflow-hidden bg-blue-50/30 shadow-md">
+        <div className="border-2 border-button-outline rounded-2xl p-6 relative overflow-hidden bg-blue-50/30 shadow-md">
            <div className="absolute top-0 right-0 bg-banner text-white text-xs font-bold px-3 py-1 rounded-bl-xl">
              Most Popular
            </div>

@@ -72,7 +72,7 @@ export default function Step4Graph() {
 
       <button 
         onClick={nextStep} 
-        className="w-full bg-primary text-white font-bold py-4 rounded-full shadow-lg hover:bg-primary-dark transition-all mt-4"
+        className="w-full bg-next-button text-white font-bold py-4 rounded-full shadow-lg hover:opacity-90 transition-all mt-4"
       >
         Continue
       </button>
